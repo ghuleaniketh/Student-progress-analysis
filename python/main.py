@@ -17,6 +17,7 @@ app.add_middleware(
 def health():
     return {"status": "ok", "service": "SPA Python Microservice"}
 
+
 @app.post("/analyse")
 def analyse(data: StudentInput):
     result = analyse_student(data.dict())
