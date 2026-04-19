@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pandas
+numpy
+pydantic
+pymupdf
+sentence-transformers
+chromadb
+anthropic
+python-dotenv

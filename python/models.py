@@ -1,17 +1,23 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 
-class Component(BaseModel):
+
+class ComponentInput(BaseModel):
     label: str
     raw_score: float
     max_score: float
     converts_to: float
+    unit_covered: Optional[str] = ""
 
-class Subject(BaseModel):
+
+class SubjectInput(BaseModel):
     subject_id: str
-    components: List[Component]
+    name: Optional[str] = ""
+    units: Optional[List[str]] = []
+    components: List[ComponentInput]
+
 
 class StudentInput(BaseModel):
     student_id: str
-    name: str
-    subjects: List[Subject]
+    student_name: Optional[str] = "Student"
+    subjects: List[SubjectInput]
