@@ -6,5 +6,6 @@ pydantic
 pymupdf
 sentence-transformers
 chromadb
-anthropic
 python-dotenv
+httpx
+python-multipart
