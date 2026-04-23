@@ -16,8 +16,12 @@ def get_collection(name: str):
     )
 
 
-def ingest_pdf(pdf_path: str, collection_name: str, chunk_size: int = 400) -> dict:
-    doc = fitz.open(pdf_path)
+def list_collections() -> list[str]:
+    return [c.name for c in chroma_client.list_collections()]
+
+
+def ingest_pdf(pdf_bytes: bytes, collection_name: str, chunk_size: int = 400) -> dict:
+    doc = fitz.open(stream=pdf_bytes, filetype="pdf")
     chunks, ids = [], []
 
     for page_num, page in enumerate(doc):

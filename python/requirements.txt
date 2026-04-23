@@ -9,3 +9,5 @@ chromadb
 python-dotenv
 httpx
 python-multipart
+motor
+sarvamai
