@@ -23,6 +23,7 @@ export default function Dashboard() {
   };
 
   return (
+    
     <div
       className="min-h-screen"
       style={{ background: "#F5F4F1", fontFamily: "'Inter', system-ui, sans-serif" }}
