@@ -35,10 +35,11 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="Student Performance Analyser", lifespan=lifespan)
 
 # ── CORS ─────────────────────────────────────────────────────────────────────
-
+orign1 = os.getenv("CORS_ORIGIN")
+origin2 = os.getenv("CORS_ORIGIN2")
 CORS_ORIGINS = [
-    os.getenv("CORS_ORIGIN",  "http://localhost:5173"),
-    os.getenv("CORS_ORIGIN2", "http://127.0.0.1:5173"),
+    os.getenv("CORS_ORIGIN"),
+    os.getenv("CORS_ORIGIN2"),
 ]
 
 app.add_middleware(
