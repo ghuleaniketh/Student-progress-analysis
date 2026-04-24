@@ -37,9 +37,11 @@ app = FastAPI(title="Student Performance Analyser", lifespan=lifespan)
 # ── CORS ─────────────────────────────────────────────────────────────────────
 orign1 = os.getenv("CORS_ORIGIN")
 origin2 = os.getenv("CORS_ORIGIN2")
+origin3 = os.getenv("CORS_ORIGIN3")
 CORS_ORIGINS = [
     os.getenv("CORS_ORIGIN"),
     os.getenv("CORS_ORIGIN2"),
+    os.getenv("CORS_ORIGIN3"),
 ]
 
 app.add_middleware(
